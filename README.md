@@ -65,13 +65,13 @@ cd darknet
 darknet.exe detector demo cfg/coco.data cfg/yolov4.cfg ../model/yolov4.weights ../data/demo.mp4 -ext_output
 ```
 
-### 4. Prepare your dataset
+### Prepare your dataset
 
 1. Data preparation
 
 copy your dataset into data folder
 
-### 5. Prepare necessary files for training 
+### Prepare necessary files for training 
 
 1. Create yolov4.data file and fill it as following:
 
@@ -108,7 +108,7 @@ train
 tvmonitor
 ```
 
-### 6. Train the Model
+### Train the Model
 
 1. Download pre-trained weights for training
     https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-csp.conv.142
