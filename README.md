@@ -117,13 +117,30 @@ tvmonitor
 
 ```bash
 cd darknet
-darknet.exe detector train ../model/yolov4.data ../model/yolov4-csp.cfg ../model/yolov4.conv.142
+darknet.exe detector train ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../model/yolov4-csp.conv.142
 ```
 
 3. Then stop and by using partially-trained model ../backup/yolov4_1000.weights run training with multigpu (up to 4 GPUs): 
 
 ```bash
 cd darknet
-darknet.exe detector train ../model/yolov4.data ../model/yolov4-csp.cfg ../backup/yolov4_1000.weights -gpus 0,1,2,3
+darknet.exe detector train ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../backup/yolov4_1000.weights -gpus 0,1,2,3
 ```
 
+
+### Test your training Yolov4 result on GPU
+
+1. Run the detector
+
+For still image:
+```
+cd darknet
+darknet.exe detector test ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../backup/yolov4-csp_last.weights -ext_output data/dog.jpg
+```
+
+For video file (You need to find .avi/.mp4 video file yourself. Put the file in data folder):
+
+```bash
+cd darknet
+darknet.exe detector demo ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../backup/yolov4-csp_last.weights -ext_output ../data/demo.mp4 -ext_output
+```
