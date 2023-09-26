@@ -124,7 +124,7 @@ darknet.exe detector train ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../m
 
 ```bash
 cd darknet
-darknet.exe detector train ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../backup/yolov4_1000.weights -gpus 0,1,2,3
+darknet.exe detector train ../model/yolov4-csp.data ../model/yolov4-csp.cfg ../backup/yolov4_1000.weights -gpus 0,1,2,3 -map
 ```
 
 
